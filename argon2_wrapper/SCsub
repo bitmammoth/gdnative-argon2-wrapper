@@ -1,7 +1,10 @@
 Import('env')
 
 module_env = env.Clone()
+
+#Comment this line to build for Godot 3.2.3
 module_env.Append(CPPDEFINES=["GODOT4"])
+
 env.Append(LIBPATH=["#thirdparty/argon2/lib"])
 env.Append(LIBS=['argon2'])
 
